@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brendan Biddell — Resume</title>
+<meta name="description" content="Resume of Brendan Biddell — senior marketing &amp; marketing-technology leader.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Anton&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a0a0f;--bg-nav:rgba(10,10,15,.72);--text:#f4f4f8;--muted:#9a9aab;
+  --card:rgba(255,255,255,.035);--card-solid:rgba(18,18,27,.7);--border:rgba(255,255,255,.1);--border-soft:rgba(255,255,255,.06);
+  --red:#e2231a;--ink:#ffcf2e;--blue:#2b6bff;--btn-text:#fff;--grid-line:rgba(255,255,255,.03);--shadow:0 24px 70px rgba(0,0,0,.5);
+}
+html[data-theme="light"]{
+  --bg:#f2f2f4;--bg-nav:rgba(255,255,255,.85);--text:#0b0b0f;--muted:#565663;
+  --card:#fff;--card-solid:#fff;--border:rgba(11,11,15,.14);--border-soft:rgba(11,11,15,.08);
+  --red:#d0021b;--ink:#c47f00;--blue:#1a4fd6;--btn-text:#fff;--grid-line:rgba(11,11,15,.05);--shadow:0 18px 48px rgba(11,11,15,.12);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,sans-serif;line-height:1.65;overflow-x:hidden;transition:background .4s,color .4s}
+::selection{background:var(--red);color:#fff}
+h1,h2,h3{font-family:'Space Grotesk',sans-serif}
+.display{font-family:'Anton',sans-serif;text-transform:uppercase;letter-spacing:.01em}
+.grad{background:linear-gradient(100deg,var(--red),#ff5e3a 55%,var(--ink) 120%);-webkit-background-clip:text;background-clip:text;color:transparent}
+::view-transition-old(root),::view-transition-new(root){animation:none;mix-blend-mode:normal}
+
+.bg-grid{position:fixed;inset:0;z-index:-3;background-image:linear-gradient(var(--grid-line) 1px,transparent 1px),linear-gradient(90deg,var(--grid-line) 1px,transparent 1px);background-size:52px 52px;mask-image:radial-gradient(ellipse 90% 65% at 50% 0%,#000 40%,transparent 100%)}
+.speed{position:fixed;inset:0;z-index:-2;pointer-events:none;opacity:.5;background:repeating-linear-gradient(115deg,transparent 0 22px,color-mix(in srgb,var(--red) 8%,transparent) 22px 23px,transparent 23px 60px);mask-image:radial-gradient(ellipse 70% 60% at 80% 12%,#000,transparent 75%)}
+.glow{position:fixed;border-radius:50%;filter:blur(120px);z-index:-2;pointer-events:none}
+.glow1{width:520px;height:520px;background:color-mix(in srgb,var(--red) 28%,transparent);top:-190px;right:-120px;opacity:.5}
+.glow2{width:420px;height:420px;background:color-mix(in srgb,var(--blue) 16%,transparent);bottom:-150px;left:-160px;opacity:.5}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:14px clamp(20px,5vw,64px);background:var(--bg-nav);backdrop-filter:blur(18px);border-bottom:1px solid var(--border-soft)}
+.logo{font-family:'Anton',sans-serif;font-size:22px;text-transform:uppercase;letter-spacing:.03em;text-decoration:none;color:var(--text)}
+.logo b{color:var(--red)}
+.nav-links{display:flex;gap:20px;align-items:center}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;transition:color .2s}
+.nav-links a:hover{color:var(--text)}
+#themeToggle{display:flex;align-items:center;gap:7px;padding:8px 14px;border:1.5px solid var(--red);background:var(--card);color:var(--text);cursor:pointer;font-family:'Space Grotesk';font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:.05em;transform:skewX(-8deg);transition:transform .25s,box-shadow .25s}
+#themeToggle span,#themeToggle svg{transform:skewX(8deg)}
+#themeToggle:hover{box-shadow:0 5px 18px color-mix(in srgb,var(--red) 40%,transparent)}
+#themeToggle svg{width:15px;height:15px;fill:none;stroke:var(--red);stroke-width:1.9;stroke-linecap:round}
+html[data-theme="dark"] .sun{display:block}html[data-theme="dark"] .moon{display:none}
+html[data-theme="light"] .sun{display:none}html[data-theme="light"] .moon{display:block}
+#themeToggle .t-label::after{content:'Light'}
+html[data-theme="light"] #themeToggle .t-label::after{content:'Dark'}
+@media(max-width:560px){#themeToggle .t-label{display:none}.nav-links{gap:14px}}
+
+main{max-width:960px;margin:0 auto;padding:150px clamp(20px,5vw,48px) 60px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:'Space Grotesk';font-size:13px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;margin-bottom:20px;color:var(--red)}
+.eyebrow::before{content:'';width:36px;height:2px;background:var(--red)}
+h1{font-size:clamp(42px,8vw,84px);line-height:.94;margin-bottom:18px}
+.intro{color:var(--muted);font-size:17px;max-width:720px;margin-bottom:32px}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:13px 26px;font-family:'Space Grotesk';font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.05em;text-decoration:none;transform:skewX(-8deg);transition:transform .25s,box-shadow .25s,border-color .25s,color .25s;margin:0 8px 10px 0}
+.btn span{display:inline-block;transform:skewX(8deg)}
+.btn-primary{background:var(--red);color:#fff}
+.btn-primary:hover{transform:skewX(-8deg) translateY(-3px);box-shadow:0 12px 34px color-mix(in srgb,var(--red) 55%,transparent)}
+.btn-ghost{border:2px solid var(--border);color:var(--text)}
+.btn-ghost:hover{border-color:var(--red);color:var(--red);transform:skewX(-8deg) translateY(-3px)}
+
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:13px;margin:42px 0 66px}
+.stat{background:var(--card);border:1px solid var(--border);padding:22px 20px;position:relative;overflow:hidden;clip-path:polygon(0 0,100% 0,100% 100%,13px 100%,0 calc(100% - 13px))}
+.stat::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--red)}
+.stat .num{font-family:'Anton',sans-serif;font-size:clamp(30px,3.4vw,42px);line-height:1;color:var(--text)}
+.stat .num small{font-size:.5em;color:var(--red)}
+.stat .lbl{font-size:12px;color:var(--muted);margin-top:7px}
+
+h2.sec{font-size:clamp(26px,4vw,44px);line-height:1;margin:66px 0 32px;text-transform:uppercase;display:flex;align-items:center;gap:14px}
+h2.sec::before{content:'';width:40px;height:4px;background:var(--red);transform:skewX(-20deg)}
+
+.timeline{position:relative;padding-left:30px}
+.timeline::before{content:'';position:absolute;left:5px;top:8px;bottom:8px;width:3px;background:linear-gradient(180deg,var(--red),var(--ink))}
+.role{position:relative;background:var(--card);border:1px solid var(--border);padding:clamp(22px,3vw,32px);margin-bottom:20px;box-shadow:var(--shadow);
+  clip-path:polygon(0 0,100% 0,100% calc(100% - 16px),calc(100% - 16px) 100%,0 100%);
+  opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1),border-color .3s}
+.role.on{opacity:1;transform:none}
+.role:hover{border-color:var(--rc,var(--red))}
+.role::before{content:'';position:absolute;left:-30px;top:30px;width:13px;height:13px;background:var(--bg);border:3px solid var(--rc,var(--red));transform:rotate(45deg)}
+.r-head{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;align-items:baseline;margin-bottom:4px}
+.role h3{font-size:clamp(18px,2.4vw,23px);text-transform:uppercase;font-family:'Space Grotesk';font-weight:700}
+.r-when{font-family:'Anton',sans-serif;font-size:15px;color:var(--rc,var(--red));letter-spacing:.05em;white-space:nowrap}
+.r-co{color:var(--rc,var(--red));font-family:'Space Grotesk';font-weight:600;font-size:15px;margin-bottom:6px}
+.r-meta{display:flex;gap:7px;flex-wrap:wrap;margin:10px 0 15px}
+.r-meta span{font-family:'Space Grotesk';font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;padding:5px 11px;border:1px solid var(--border);color:var(--muted);transform:skewX(-8deg)}
+.r-meta span span{display:inline-block;transform:skewX(8deg)}
+.role ul{list-style:none}
+.role li{padding:7px 0 7px 24px;position:relative;color:var(--text);opacity:.83;font-size:14.5px;border-bottom:1px solid var(--border-soft)}
+.role li:last-child{border-bottom:none}
+.role li::before{content:'▸';position:absolute;left:0;color:var(--rc,var(--red));font-size:12px;top:9px}
+.role li b{font-weight:600;opacity:1}
+
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:18px}
+.panel{background:var(--card);border:1px solid var(--border);padding:26px;box-shadow:var(--shadow);clip-path:polygon(0 0,100% 0,100% calc(100% - 16px),calc(100% - 16px) 100%,0 100%)}
+.panel h3{font-family:'Space Grotesk';font-size:12px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:16px;color:var(--red);display:flex;align-items:center;gap:9px}
+.panel h3::before{content:'';width:16px;height:2px;background:var(--red)}
+.chips{display:flex;gap:7px;flex-wrap:wrap}
+.chips span{font-family:'Space Grotesk';font-size:12px;font-weight:600;padding:6px 12px;border:1px solid var(--border);color:var(--text);opacity:.82;transform:skewX(-8deg);transition:border-color .25s,color .25s}
+.chips span span{display:inline-block;transform:skewX(8deg)}
+.chips span:hover{border-color:var(--red);color:var(--red);opacity:1}
+.panel p.edu{color:var(--text);opacity:.85;font-size:14.5px;padding:8px 0;border-bottom:1px solid var(--border-soft)}
+.panel p.edu:last-child{border-bottom:none}
+.panel p.edu b{font-family:'Space Grotesk'}
+.panel p.edu small{display:block;color:var(--muted)}
+
+.cta{text-align:center;margin-top:76px;padding:clamp(30px,5vw,54px);position:relative;overflow:hidden;
+  background:linear-gradient(135deg,color-mix(in srgb,var(--red) 10%,transparent),color-mix(in srgb,var(--blue) 8%,transparent));
+  border:1px solid color-mix(in srgb,var(--red) 24%,var(--border));clip-path:polygon(0 0,100% 0,100% calc(100% - 22px),calc(100% - 22px) 100%,0 100%)}
+.cta h2{font-size:clamp(26px,4vw,42px);line-height:1;margin-bottom:14px;text-transform:uppercase}
+.cta p{color:var(--muted);margin-bottom:26px}
+footer{border-top:1px solid var(--border-soft);padding:24px clamp(20px,5vw,64px);margin-top:56px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.04em;font-family:'Space Grotesk'}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.role{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="bg-grid"></div><div class="speed"></div>
+<div class="glow glow1"></div><div class="glow glow2"></div>
+
+<nav>
+  <a class="logo" href="index.html">BRENDAN<b>.</b></a>
+  <div class="nav-links">
+    <a href="index.html">Portfolio</a>
+    <a href="answers.html">Q&amp;A</a>
+    <button id="themeToggle" aria-label="Toggle light and dark mode">
+      <svg class="sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.4"/><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M4.8 4.8l1.7 1.7M17.5 17.5l1.7 1.7M4.8 19.2l1.7-1.7M17.5 6.5l1.7-1.7"/></svg>
+      <svg class="moon" viewBox="0 0 24 24"><path d="M20.3 14.6A8.5 8.5 0 0 1 9.4 3.7a8.5 8.5 0 1 0 10.9 10.9z"/></svg>
+      <span class="t-label"></span>
+    </button>
+  </div>
+</nav>
+
+<main>
+  <div class="eyebrow">Resume — Brendan Biddell</div>
+  <h1 class="display">Ten years of <span class="grad">brands &amp; platforms.</span></h1>
+  <p class="intro">Senior marketing leader who scales brands and the technology behind them — building martech ecosystems, agile teams and data-driven campaigns that drive demand and revenue across hospitality, entertainment, tourism, finance and digital media.</p>
+  <a class="btn btn-primary" href="Brendan-Biddell-Resume.pdf" target="_blank" rel="noopener"><span>Download PDF ↓</span></a>
+  <a class="btn btn-ghost" href="mailto:brendanbiddell@gmail.com"><span>brendanbiddell@gmail.com</span></a>
+
+  <div class="stats">
+    <div class="stat"><div class="num">2&rarr;7</div><div class="lbl">Team scaled + enterprise martech, Doltone House</div></div>
+    <div class="stat"><div class="num">+300<small>%</small></div><div class="lbl">Online sales via commerce &amp; automation</div></div>
+    <div class="stat"><div class="num">+500<small>%</small></div><div class="lbl">Youth visitation — segmentation &amp; repositioning</div></div>
+    <div class="stat"><div class="num">$5<small>M</small></div><div class="lbl">Largest marketing budget led</div></div>
+    <div class="stat"><div class="num">18</div><div class="lbl">Properties on one digital &amp; CRM engine</div></div>
+  </div>
+
+  <h2 class="sec display">Experience</h2>
+  <div class="timeline">
+
+    <div class="role" style="--rc:#e2231a">
+      <div class="r-head"><h3>Independent Consulting</h3><div class="r-when">2025 — NOW</div></div>
+      <div class="r-co">Marketing, Brand &amp; Business Strategy</div>
+      <ul><li>Consulting across marketing, brand and business strategy while supporting a family member through a health-related matter</li></ul>
+    </div>
+
+    <div class="role" style="--rc:#e2231a">
+      <div class="r-head"><h3>Head of Marketing — Leadership Team</h3><div class="r-when">2023 — 2025</div></div>
+      <div class="r-co">Doltone House</div>
+      <div class="r-meta"><span><span>Team of 7</span></span><span><span>$4M budget</span></span><span><span>Enterprise MarTech</span></span></div>
+      <ul>
+        <li>Led rollout of a new <b>enterprise martech &amp; eCommerce ecosystem</b> and digital-first strategy</li>
+        <li>Introduced CRM, lifecycle automation and modernised board-level reporting</li>
+        <li>Spearheaded Midden by Mark Olive at the Sydney Opera House — <b>300% revenue increase</b></li>
+        <li>Scaled the team 2&rarr;7; reduced campaign lead times 25%; +20% event bookings</li>
+        <li>Partnerships with Tourism Australia, Destination NSW and Sydney Opera House</li>
+      </ul>
+    </div>
+
+    <div class="role" style="--rc:#2b6bff">
+      <div class="r-head"><h3>Marketing Consultant</h3><div class="r-when">2021 — 2023</div></div>
+      <div class="r-co">JOYY (BIGO) — Social Media Platform</div>
+      <div class="r-meta"><span><span>$2M budget</span></span><span><span>AU + SEA</span></span></div>
+      <ul>
+        <li>Localised go-to-market and content strategies across Australia and Southeast Asia</li>
+        <li>Product localisation drove a <b>25% lift in user retention</b>; +25% engagement</li>
+        <li>+20% new users via hyper-targeted paid media across TikTok, YouTube, Instagram</li>
+      </ul>
+    </div>
+
+    <div class="role" style="--rc:#ffcf2e">
+      <div class="r-head"><h3>National Marketing Manager</h3><div class="r-when">2020 — 2021</div></div>
+      <div class="r-co">Meriton Suites</div>
+      <div class="r-meta"><span><span>Team of 4</span></span><span><span>$3M budget</span></span><span><span>18 properties</span></span></div>
+      <ul>
+        <li>Rebuilt the digital ecosystem — new site, <b>dynamic pricing</b>, CRO — cutting bounce 40%, lifting sales 10%</li>
+        <li>Introduced <b>automated lifecycle campaigns</b> and segmentation across the portfolio</li>
+        <li>Achieved 45% above-average occupancy through COVID; reported to executive leadership</li>
+      </ul>
+    </div>
+
+    <div class="role" style="--rc:#e2231a">
+      <div class="r-head"><h3>Innovation Marketing Manager</h3><div class="r-when">2019 — 2020</div></div>
+      <div class="r-co">News Corp</div>
+      <ul>
+        <li>Launched <b>In The Know!</b> — 1M+ hits in two weeks, 300% above forecast</li>
+        <li>+40% user engagement through acquisition funnel optimisation</li>
+        <li>Managed cross-functional teams across product, editorial and media</li>
+      </ul>
+    </div>
+
+    <div class="role" style="--rc:#2b6bff">
+      <div class="r-head"><h3>Director of Marketing, Asia</h3><div class="r-when">2018 — 2019</div></div>
+      <div class="r-co">Village Roadshow — Lionsgate Entertainment World</div>
+      <div class="r-meta"><span><span>$5M budget</span></span><span><span>China / USA / SEA</span></span></div>
+      <ul>
+        <li>Led global GTM for the <b>world's first vertical theme park</b>; high-volume ticketing at scale</li>
+        <li>Village Roadshow's most successful Asia campaign — <b>200% over forecast</b></li>
+        <li>Agency (Leo Burnett), government and Chinese OTA partnerships</li>
+      </ul>
+    </div>
+
+    <div class="role" style="--rc:#ffcf2e">
+      <div class="r-head"><h3>Marketing Manager &rarr; Head of Marketing</h3><div class="r-when">2015 — 2018</div></div>
+      <div class="r-co">Luna Park Sydney</div>
+      <div class="r-meta"><span><span>Team of 6</span></span><span><span>$3M budget</span></span></div>
+      <ul>
+        <li>Integrated <b>eCommerce, automation &amp; social</b> — online sales up 300%</li>
+        <li>Introduced loyalty programs, new product lines and partnerships</li>
+        <li>Repositioned the brand — youth visitation up 500%; created Halloscream</li>
+        <li>Launched Chinese-language marketing — +200% inbound Chinese visitation</li>
+      </ul>
+    </div>
+
+    <div class="role" style="--rc:#9a9aab">
+      <div class="r-head"><h3>Earlier Career</h3><div class="r-when">2008 — 2015</div></div>
+      <div class="r-co">FleetPlus · UTS</div>
+      <ul><li>Marketing Manager, FleetPlus (2010–15)</li><li>Exchange &amp; Study Abroad Officer, University of Technology Sydney (2008–10)</li></ul>
+    </div>
+  </div>
+
+  <h2 class="sec display">Arsenal &amp; Education</h2>
+  <div class="grid2">
+    <div class="panel">
+      <h3>MarTech &amp; Data</h3>
+      <div class="chips"><span><span>CRM &amp; automation</span></span><span><span>Customer Data Platforms</span></span><span><span>HubSpot &amp; Salesforce</span></span><span><span>Klaviyo &amp; Campaign Monitor</span></span><span><span>GA4 &amp; Looker Studio</span></span><span><span>Dynamic pricing &amp; CRO</span></span><span><span>Segmentation &amp; lifecycle</span></span><span><span>Shopify &amp; Webflow</span></span><span><span>AI marketing tools</span></span></div>
+    </div>
+    <div class="panel">
+      <h3>Strategic Leadership</h3>
+      <div class="chips"><span><span>Team building &amp; mentoring</span></span><span><span>Full-funnel strategy</span></span><span><span>Business cases &amp; prioritisation</span></span><span><span>Agile delivery partnering</span></span><span><span>Loyalty programs</span></span><span><span>Ticketed events 6k+</span></span><span><span>Tourism &amp; gov partnerships</span></span><span><span>Board-level reporting</span></span></div>
+    </div>
+    <div class="panel">
+      <h3>Education</h3>
+      <p class="edu"><b>Bachelor of Business</b><small>University of Technology Sydney</small></p>
+      <p class="edu"><b>Exchange Program</b><small>San Francisco State University</small></p>
+      <p class="edu"><b>Chinese Studies</b><small>Fudan University, Shanghai</small></p>
+    </div>
+    <div class="panel">
+      <h3>Recognition &amp; Media</h3>
+      <p class="edu"><b>Midden by Mark Olive</b><small>Broadsheet, SBS Food, Gourmet Traveller</small></p>
+      <p class="edu"><b>Halloscream</b><small>Channel 7, Time Out — Sydney must-attend event</small></p>
+      <p class="edu"><b>Vivid Sydney activations</b><small>Destination NSW annual showcase</small></p>
+      <p class="edu"><b>Lionsgate campaign</b><small>Asia-Pacific Leisure Media profile</small></p>
+    </div>
+  </div>
+
+  <div class="cta">
+    <div class="eyebrow" style="justify-content:center;display:inline-flex">The proof</div>
+    <h2 class="display">See it <span class="grad">in action.</span></h2>
+    <p>MarTech rebuilds, loyalty and global launches — with campaign videos.</p>
+    <a class="btn btn-primary" href="index.html"><span>View portfolio →</span></a>
+    <a class="btn btn-ghost" href="answers.html"><span>The Q&amp;A</span></a>
+  </div>
+</main>
+
+<footer>
+  <div>© 2026 Brendan Biddell · brendanbiddell@gmail.com · 0416 180 786</div>
+  <div>Virgin Australia — Head of Marketing Programs</div>
+</footer>
+
+<script>
+const root=document.documentElement;
+root.dataset.theme=localStorage.getItem('theme')||'dark';
+document.getElementById('themeToggle').addEventListener('click',e=>{
+  const next=root.dataset.theme==='dark'?'light':'dark';
+  const apply=()=>{root.dataset.theme=next;localStorage.setItem('theme',next);};
+  if(!document.startViewTransition){apply();return;}
+  const x=e.clientX||innerWidth-40,y=e.clientY||30,r=Math.hypot(Math.max(x,innerWidth-x),Math.max(y,innerHeight-y));
+  document.startViewTransition(apply).ready.then(()=>{
+    root.animate({clipPath:[`circle(0px at ${x}px ${y}px)`,`circle(${r}px at ${x}px ${y}px)`]},
+      {duration:600,easing:'cubic-bezier(.4,0,.2,1)',pseudoElement:'::view-transition-new(root)'});
+  });
+});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.06});
+document.querySelectorAll('.role').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

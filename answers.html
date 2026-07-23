@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brendan Biddell — The Q&A</title>
+<meta name="description" content="Brendan Biddell answers the questions that matter for Head of Marketing Programs at Virgin Australia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Anton&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a0a0f;--bg-nav:rgba(10,10,15,.72);--text:#f4f4f8;--muted:#9a9aab;
+  --card:rgba(255,255,255,.035);--card-solid:rgba(18,18,27,.7);--border:rgba(255,255,255,.1);--border-soft:rgba(255,255,255,.06);
+  --red:#e2231a;--ink:#ffcf2e;--blue:#2b6bff;--btn-text:#fff;--grid-line:rgba(255,255,255,.03);--shadow:0 24px 70px rgba(0,0,0,.5);
+}
+html[data-theme="light"]{
+  --bg:#f2f2f4;--bg-nav:rgba(255,255,255,.85);--text:#0b0b0f;--muted:#565663;
+  --card:#fff;--card-solid:#fff;--border:rgba(11,11,15,.14);--border-soft:rgba(11,11,15,.08);
+  --red:#d0021b;--ink:#c47f00;--blue:#1a4fd6;--btn-text:#fff;--grid-line:rgba(11,11,15,.05);--shadow:0 18px 48px rgba(11,11,15,.12);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,sans-serif;line-height:1.7;overflow-x:hidden;transition:background .4s,color .4s}
+::selection{background:var(--red);color:#fff}
+h1,h2,h3{font-family:'Space Grotesk',sans-serif}
+.display{font-family:'Anton',sans-serif;text-transform:uppercase;letter-spacing:.01em}
+.grad{background:linear-gradient(100deg,var(--red),#ff5e3a 55%,var(--ink) 120%);-webkit-background-clip:text;background-clip:text;color:transparent}
+::view-transition-old(root),::view-transition-new(root){animation:none;mix-blend-mode:normal}
+
+.bg-grid{position:fixed;inset:0;z-index:-3;background-image:linear-gradient(var(--grid-line) 1px,transparent 1px),linear-gradient(90deg,var(--grid-line) 1px,transparent 1px);background-size:52px 52px;mask-image:radial-gradient(ellipse 90% 65% at 50% 0%,#000 40%,transparent 100%)}
+.speed{position:fixed;inset:0;z-index:-2;pointer-events:none;opacity:.5;background:repeating-linear-gradient(115deg,transparent 0 22px,color-mix(in srgb,var(--red) 8%,transparent) 22px 23px,transparent 23px 60px);mask-image:radial-gradient(ellipse 70% 60% at 80% 12%,#000,transparent 75%)}
+.glow{position:fixed;border-radius:50%;filter:blur(120px);z-index:-2;pointer-events:none}
+.glow1{width:520px;height:520px;background:color-mix(in srgb,var(--red) 28%,transparent);top:-190px;right:-120px;opacity:.5}
+.glow2{width:420px;height:420px;background:color-mix(in srgb,var(--blue) 16%,transparent);bottom:-150px;left:-160px;opacity:.5}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:14px clamp(20px,5vw,64px);background:var(--bg-nav);backdrop-filter:blur(18px);border-bottom:1px solid var(--border-soft)}
+.logo{font-family:'Anton',sans-serif;font-size:22px;text-transform:uppercase;letter-spacing:.03em;text-decoration:none;color:var(--text)}
+.logo b{color:var(--red)}
+.nav-links{display:flex;gap:20px;align-items:center}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;transition:color .2s}
+.nav-links a:hover{color:var(--text)}
+#themeToggle{display:flex;align-items:center;gap:7px;padding:8px 14px;border:1.5px solid var(--red);background:var(--card);color:var(--text);cursor:pointer;font-family:'Space Grotesk';font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:.05em;transform:skewX(-8deg);transition:transform .25s,box-shadow .25s}
+#themeToggle span,#themeToggle svg{transform:skewX(8deg)}
+#themeToggle:hover{box-shadow:0 5px 18px color-mix(in srgb,var(--red) 40%,transparent)}
+#themeToggle svg{width:15px;height:15px;fill:none;stroke:var(--red);stroke-width:1.9;stroke-linecap:round}
+html[data-theme="dark"] .sun{display:block}html[data-theme="dark"] .moon{display:none}
+html[data-theme="light"] .sun{display:none}html[data-theme="light"] .moon{display:block}
+#themeToggle .t-label::after{content:'Light'}
+html[data-theme="light"] #themeToggle .t-label::after{content:'Dark'}
+@media(max-width:520px){#themeToggle .t-label{display:none}}
+
+main{max-width:880px;margin:0 auto;padding:150px clamp(20px,5vw,48px) 60px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:'Space Grotesk';font-size:13px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;margin-bottom:22px;color:var(--red)}
+.eyebrow::before{content:'';width:36px;height:2px;background:var(--red)}
+h1{font-size:clamp(44px,9vw,88px);line-height:.95;margin-bottom:20px}
+.intro{color:var(--muted);font-size:18px;max-width:660px;margin-bottom:60px}
+
+.qa{background:var(--card);border:1px solid var(--border);padding:clamp(26px,4vw,46px);margin-bottom:28px;position:relative;overflow:hidden;box-shadow:var(--shadow);
+  clip-path:polygon(0 0,100% 0,100% calc(100% - 20px),calc(100% - 20px) 100%,0 100%);
+  opacity:0;transform:translateY(32px);transition:opacity .8s cubic-bezier(.22,1,.36,1),transform .8s cubic-bezier(.22,1,.36,1)}
+.qa.on{opacity:1;transform:none}
+.qa::after{content:'';position:absolute;top:0;left:0;width:6px;height:100%;background:var(--qc)}
+.q-num{font-family:'Anton',sans-serif;font-size:clamp(30px,5vw,46px);color:var(--qc);line-height:1;margin-bottom:10px;opacity:.9}
+.qa h2{font-size:clamp(20px,2.8vw,27px);line-height:1.22;margin-bottom:22px;text-transform:uppercase;font-family:'Space Grotesk';font-weight:700}
+.qa p{color:var(--text);opacity:.84;font-size:16px;margin-bottom:16px}
+.qa p:last-child{margin-bottom:0}
+.pull{border-left:4px solid var(--qc);padding:4px 0 4px 20px;margin:24px 0;font-family:'Space Grotesk';font-size:19px;font-weight:600;line-height:1.4;color:var(--text);opacity:1!important}
+
+.cta{text-align:center;margin-top:64px;padding:clamp(30px,5vw,56px);position:relative;overflow:hidden;
+  background:linear-gradient(135deg,color-mix(in srgb,var(--red) 10%,transparent),color-mix(in srgb,var(--blue) 8%,transparent));
+  border:1px solid color-mix(in srgb,var(--red) 24%,var(--border));clip-path:polygon(0 0,100% 0,100% calc(100% - 22px),calc(100% - 22px) 100%,0 100%)}
+.cta h2{font-size:clamp(28px,4vw,44px);line-height:1;margin-bottom:14px;text-transform:uppercase}
+.cta p{color:var(--muted);margin-bottom:26px}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:14px 28px;font-family:'Space Grotesk';font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.05em;text-decoration:none;transform:skewX(-8deg);transition:transform .25s,box-shadow .25s,color .25s,border-color .25s;margin:0 5px 10px}
+.btn span{display:inline-block;transform:skewX(8deg)}
+.btn-primary{background:var(--red);color:#fff}
+.btn-primary:hover{transform:skewX(-8deg) translateY(-3px);box-shadow:0 12px 34px color-mix(in srgb,var(--red) 55%,transparent)}
+.btn-ghost{border:2px solid var(--border);color:var(--text)}
+.btn-ghost:hover{border-color:var(--red);color:var(--red);transform:skewX(-8deg) translateY(-3px)}
+
+footer{border-top:1px solid var(--border-soft);padding:24px clamp(20px,5vw,64px);margin-top:60px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.04em;font-family:'Space Grotesk'}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.qa{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="bg-grid"></div><div class="speed"></div>
+<div class="glow glow1"></div><div class="glow glow2"></div>
+
+<nav>
+  <a class="logo" href="index.html">BRENDAN<b>.</b></a>
+  <div class="nav-links">
+    <a href="index.html">Portfolio</a>
+    <a href="resume.html">Resume</a>
+    <button id="themeToggle" aria-label="Toggle light and dark mode">
+      <svg class="sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.4"/><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M4.8 4.8l1.7 1.7M17.5 17.5l1.7 1.7M4.8 19.2l1.7-1.7M17.5 6.5l1.7-1.7"/></svg>
+      <svg class="moon" viewBox="0 0 24 24"><path d="M20.3 14.6A8.5 8.5 0 0 1 9.4 3.7a8.5 8.5 0 1 0 10.9 10.9z"/></svg>
+      <span class="t-label"></span>
+    </button>
+  </div>
+</nav>
+
+<main>
+  <div class="eyebrow">Brendan Biddell — Straight Answers</div>
+  <h1 class="display">The <span class="grad">Q&amp;A.</span></h1>
+  <p class="intro">The questions that actually matter for Head of Marketing Programs — martech, data, commercial impact and why Virgin. Answered plainly, no filler.</p>
+
+  <div class="qa" style="--qc:#e2231a">
+    <div class="q-num display">01</div>
+    <h2>This role is Marketing's voice into Technology. What makes you the translator?</h2>
+    <p>Because I've lived on both sides of that table. At Doltone House I owned the marketing technology roadmap end to end — I scoped what the business needed, translated it into platform, data and integration requirements, then worked with delivery teams to actually ship it.</p>
+    <p class="pull">Most marketers can't spec a platform. Most technologists don't think in customer journeys. I do both — and I make each side feel understood.</p>
+    <p>My instinct is to start with the commercial outcome, work backwards to the customer journey, and only then decide what the technology has to do. That keeps the roadmap honest — you build what moves the business, not what's shiny.</p>
+  </div>
+
+  <div class="qa" style="--qc:#2b6bff">
+    <div class="q-num display">02</div>
+    <h2>You haven't run AEP or Tealium by name. Why back yourself here?</h2>
+    <p>I'll be direct: I've built the same capability with different logos. Enterprise martech ecosystems, customer data platforms, marketing automation, lifecycle campaigns, dynamic pricing and analytics — I've stood those up at Doltone House and Meriton across HubSpot, Salesforce, GA4, Klaviyo, Shopify and a stack of integration tools.</p>
+    <p>AEP, Adobe Marketing Cloud and Tealium are the enterprise-grade version of a discipline I already know cold: unifying customer data, segmenting it, and activating it into personalised journeys.</p>
+    <p class="pull">Platforms change. The thinking — data in, insight out, experience delivered — doesn't. And I learn tools fast; my resume is a list of first-time launches.</p>
+  </div>
+
+  <div class="qa" style="--qc:#ffcf2e">
+    <div class="q-num display">03</div>
+    <h2>How do you prioritise a technology roadmap when everyone wants everything?</h2>
+    <p>Commercial return and customer impact, ranked ruthlessly. Every initiative has to answer two questions: what does it do for the customer experience, and what does it do for the P&amp;L? If it can't answer both, it waits.</p>
+    <p>I've built business cases and prioritised marketing spend up to $5M, and I report on it at board level — so I'm comfortable defending a roadmap to executives and saying no to good ideas that aren't the right ones yet.</p>
+    <p>In an agile delivery environment that means being the person in the room who protects the sequence: quick wins that build trust, foundational data work that unlocks everything else, then the personalisation and loyalty payoffs on top.</p>
+  </div>
+
+  <div class="qa" style="--qc:#2b6bff">
+    <div class="q-num display">04</div>
+    <h2>Virgin has Velocity. What's your read on loyalty and personalisation?</h2>
+    <p>Loyalty is where data stops being a cost centre and starts being a growth engine. I've run loyalty programs at Luna Park, lifecycle CRM across 18 Meriton properties, and segmentation that grew youth visitation 500% and online sales 300%.</p>
+    <p class="pull">A loyalty program isn't a points ledger — it's the richest first-party data asset a brand owns, and the licence to personalise every journey.</p>
+    <p>With a CDP feeding it, Velocity becomes the connective tissue: one view of the member, personalised across booking, in-flight, on-ground and everything between. That's the difference between "nice" and genuinely better.</p>
+  </div>
+
+  <div class="qa" style="--qc:#e2231a">
+    <div class="q-num display">05</div>
+    <h2>Why Virgin Australia, and why this role?</h2>
+    <p>Two reasons. First, it's a newly created role with a blank platform roadmap — I do my best work building the engine from scratch, not maintaining someone else's. Every highlight on my CV is a first: first vertical theme park, Sydney's first big Halloween event, a first enterprise martech stack.</p>
+    <p>Second, Virgin is a brand that has always done things its own way — and I've spent a career on brands people genuinely care about. Aviation is high-volume, data-rich and experience-led, which is exactly the terrain I love.</p>
+    <p class="pull">You want to make flying better than 'nice'. I want to build the technology and data foundation that makes that promise real at every touchpoint.</p>
+    <p>And practically — I'm ready for Brisbane, I train most days so the onsite gym is a genuine perk, and $1,000 in travel credits to a person who'd rather be on a trail somewhere is dangerously well targeted.</p>
+  </div>
+
+  <div class="cta">
+    <div class="eyebrow" style="justify-content:center;display:inline-flex">See the proof</div>
+    <h2 class="display">The work behind <span class="grad">the words.</span></h2>
+    <p>MarTech rebuilds, loyalty, global launches — with campaign videos.</p>
+    <a class="btn btn-primary" href="index.html"><span>View portfolio →</span></a>
+    <a class="btn btn-ghost" href="resume.html"><span>View resume</span></a>
+    <a class="btn btn-ghost" href="mailto:brendanbiddell@gmail.com"><span>brendanbiddell@gmail.com</span></a>
+  </div>
+</main>
+
+<footer>
+  <div>© 2026 Brendan Biddell</div>
+  <div>Virgin Australia — Head of Marketing Programs</div>
+</footer>
+
+<script>
+const root=document.documentElement;
+root.dataset.theme=localStorage.getItem('theme')||'dark';
+document.getElementById('themeToggle').addEventListener('click',e=>{
+  const next=root.dataset.theme==='dark'?'light':'dark';
+  const apply=()=>{root.dataset.theme=next;localStorage.setItem('theme',next);};
+  if(!document.startViewTransition){apply();return;}
+  const x=e.clientX||innerWidth-40,y=e.clientY||30,r=Math.hypot(Math.max(x,innerWidth-x),Math.max(y,innerHeight-y));
+  document.startViewTransition(apply).ready.then(()=>{
+    root.animate({clipPath:[`circle(0px at ${x}px ${y}px)`,`circle(${r}px at ${x}px ${y}px)`]},
+      {duration:600,easing:'cubic-bezier(.4,0,.2,1)',pseudoElement:'::view-transition-new(root)'});
+  });
+});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.08});
+document.querySelectorAll('.qa').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
