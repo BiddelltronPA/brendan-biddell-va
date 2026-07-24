@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -275,7 +275,7 @@ footer{border-top:1px solid var(--border-soft);padding:24px clamp(20px,5vw,64px)
 
 <script>
 const root=document.documentElement;
-root.dataset.theme=localStorage.getItem('theme')||'dark';
+root.dataset.theme=localStorage.getItem('theme')||'light';
 document.getElementById('themeToggle').addEventListener('click',e=>{
   const next=root.dataset.theme==='dark'?'light':'dark';
   const apply=()=>{root.dataset.theme=next;localStorage.setItem('theme',next);};
